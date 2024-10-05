@@ -1,0 +1,193 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-100: hsl(276, 100%, 79%);
+  --primary-200: hsl(276, 79%, 69%);
+  --primary-300: hsl(276, 53%, 49%);
+  --primary-400: hsl(276, 64%, 48%);
+  --primary-500: hsl(276, 96%, 20%);
+  --secondary-100: hsl(173, 81%, 68%);
+  --secondary-200: hsl(173, 80%, 63%);
+  --secondary-300: hsl(173, 72%, 57%);
+  --secondary-400: hsl(173, 75%, 47%);
+  --secondary-500: hsl(173, 90%, 30%);
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-200: hsl(200, 23%, 97%);
+  --neutral-300: hsl(200, 12%, 95%);
+  --neutral-400: hsl(205, 12%, 88%);
+  --neutral-500: hsl(209, 13%, 83%);
+  --neutral-600: hsl(208, 6%, 55%);
+  --neutral-700: hsl(210, 8%, 31%);
+  --neutral-800: hsl(212, 9%, 22%);
+  --neutral-900: hsl(210, 10%, 14%);
+  --dark-100: hsl(240, 4%, 9%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-full {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.show-password {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.show-password svg {
+  width: 20px;
+  height: auto;
+  color: white;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--primary-200);
+}
+
+.message, 
+.signin {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a:hover {
+  text-decoration: underline;
+}
+
+.signin a {
+  color: var(--primary-100)
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color: var(--primary-200);
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input {
+  font-size: medium;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  background-color: var(--primary-200);
+}
+
+.submit:hover {
+  background-color: var(--primary-100);
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .message {
+    font-size: 1.2rem;
+  }
+}
